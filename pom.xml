@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.justinschaaf</groupId>
+    <artifactId>KillerSnow</artifactId>
+    <version>2021.06.22</version>
+
+    <properties>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
+        <papermc.version>1.16.5-R0.1-SNAPSHOT</papermc.version>
+    </properties>
+
+    <repositories>
+
+        <repository>
+            <id>papermc</id>
+            <url>https://papermc.io/repo/repository/maven-public/</url>
+        </repository>
+
+    </repositories>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>${papermc.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- Include LICENSE.md and README.md -->
+    <build>
+        <resources>
+            <!--
+                It's stupid that I have to re-declare that I want to include the
+                NORMAL resources directory instead of simply being able to ADD
+                files that I want to include IN ADDITION to the default resources.
+                There is no easy way to add files to include in the jar in Maven;
+                you either end up with repetitive crap like this or mountains of
+                boilerplate XML I don't want to deal with.
+
+                I've been putting up with annoying stuff like this from Maven for
+                YEARS since I started using it for anything more than
+                automatically downloading dependencies, and I don't think my needs
+                are that demanding. I'm sick and tired of it. Time to add my own
+                dependency management system to the list of stuff to make because
+                I don't want to deal with Gradle's utter confusion either.
+            -->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>${basedir}</directory>
+                <includes>
+                    <include>LICENSE.md</include>
+                    <include>README.md</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+</project>

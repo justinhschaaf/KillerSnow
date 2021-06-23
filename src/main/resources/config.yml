@@ -1,0 +1,13 @@
+#
+# #   # ##### #     #     ##### ####         #### #   #  ###  #       #
+# #  #    #   #     #     #     #   #       #     ##  # #   # #       #
+# ###     #   #     #     ##### ####         ###  # # # #   # #   #   #
+# #  #    #   #     #     #     #   #           # #  ## #   #  # # # #
+# #   # ##### ##### ##### ##### #   #       ####  #   #  ###    #   #
+#
+# by Justin H. Schaaf (https://justinschaaf.com)
+# Version 2021.06.22
+#
+
+# How much damage snowballs should do upon impact with an entity
+damage: 1

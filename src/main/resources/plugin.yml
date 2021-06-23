@@ -1,0 +1,6 @@
+main: "com.justinschaaf.killersnow.KillerSnow"
+name: "KillerSnow"
+version: "2021.06.22"
+api-version: "1.16"
+author: "justinhschaaf"
+website: "https://github.com/justinhschaaf/KillerSnow"
